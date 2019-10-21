@@ -1,0 +1,52 @@
+git essentials:
+
+basic commands:
+git remote add [url]
+git add .
+git commit -m ""
+git push -u origin master
+
+
+Create a branch:
+1.git pull --all ******** before creating a new branch , pull all the changes from upstream, ur master should be up-to-date.
+ 
+2.git checkout -b [name of branch]
+3.git branch -a *********lists all the  branches.
+4.**********next time you push ,to the new branch:::: git push origin [name of branch]
+5. delete branch: git branch -d [name_of_your branch] .
+force delete the local branch on file system :::: git branch -D [name_of_branch].
+
+
+6. adding new remote to branch:::::: 
+git remote add [name_of_remote] [name_of_branch] *****adding remote to branch.
+git push [name_of_your_remote] [url] ****push changes from your commit into your branch
+git fetch [name_of_your_remote] *****update your branch when the original branch from official repository has been updated.
+
+
+
+
+
+
+
+Now u have a bug fix, and you have created a branch , after the bug fix, you have to merge the branch with the major branch you were working with.
+
+
+Question: when we merge the branch with the working one, is the bugfix branch deleted? or u have to manually delete 
+
+task: there was a branch bug fix. you have a couple of commits on that branch . now you have to merge those changes onto the working branch.
+
+1.git checkout [working branch] ***************** example: git checkout master.
+2.git merge --squash [bugfix branch]
+3.git commit.
+
+so, the 3 one gives a single commit from merged changes. ommiting -m parameter lets you modify a draft commit message containing every message from your squashed
+commits before finalizing your commit.
+
+
+
+
+
+
+
+
+
