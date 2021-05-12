@@ -44,7 +44,21 @@ commits before finalizing your commit.
 
 
 
+REBASE:
 
+- git rebase master [branch]
+but what if u rebased the master with branch .
+ex: git rebase [branch] master
+
+what to do?
+
+
+delete the local branch , update it with the actual branch
+
+git checkout origin/master
+git branch -D master
+git checkout master.(doesnt work) -------> git checkout --track origin/master
+git pull upstream master
 
 
 
